@@ -1,0 +1,23 @@
+PASS ECN codepoints, threshold, CNP format, DSCP/Flow Label preservation and ICRC invariance
+PASS E01 IPv4 marked=0 already_ce=0 ce_rx=0 cnp_tx=0 cnp_rx=0 merged=0 cnp_dropped=0
+PASS E01 IPv4 marked=0 already_ce=0 ce_rx=0 cnp_tx=0 cnp_rx=0 merged=0 cnp_dropped=0
+PASS E01 IPv6 marked=0 already_ce=0 ce_rx=0 cnp_tx=0 cnp_rx=0 merged=0 cnp_dropped=0
+PASS E01 IPv6 marked=0 already_ce=0 ce_rx=0 cnp_tx=0 cnp_rx=0 merged=0 cnp_dropped=0
+PASS E02 ECT(0)/ECT(1)/Not-ECT/CE, threshold equality, DSCP and Flow Label preservation
+PASS E02 ECT(0)/ECT(1)/Not-ECT/CE, threshold equality, DSCP and Flow Label preservation
+PASS E03 IPv4 IPv4-checksum/UDP/ICRC, CNP format and corruption rejection
+PASS E03 IPv6 IPv4-checksum/UDP/ICRC, CNP format and corruption rejection
+PASS E04 IPv4 marked=60 already_ce=0 ce_rx=60 cnp_tx=6 cnp_rx=6 merged=57 cnp_dropped=0
+PASS E04 IPv6 marked=60 already_ce=0 ce_rx=60 cnp_tx=6 cnp_rx=6 merged=57 cnp_dropped=0
+PASS E05 IPv4 marked=1932 already_ce=0 ce_rx=640 cnp_tx=636 cnp_rx=636 merged=6 cnp_dropped=0
+PASS E05 IPv6 marked=1932 already_ce=0 ce_rx=640 cnp_tx=636 cnp_rx=636 merged=6 cnp_dropped=0
+PASS E06 IPv4 marked=112 already_ce=0 ce_rx=32 cnp_tx=32 cnp_rx=32 merged=0 cnp_dropped=0
+PASS E06 IPv6 marked=112 already_ce=0 ce_rx=32 cnp_tx=32 cnp_rx=32 merged=0 cnp_dropped=0
+PASS E07 IPv4 marked=26 already_ce=0 ce_rx=4 cnp_tx=2 cnp_rx=2 merged=2 cnp_dropped=0
+PASS E07 IPv6 marked=26 already_ce=0 ce_rx=4 cnp_tx=2 cnp_rx=2 merged=2 cnp_dropped=0
+PASS E08-read-credit IPv4 marked=52 already_ce=0 ce_rx=10 cnp_tx=4 cnp_rx=4 merged=8 cnp_dropped=0
+PASS E08-send-recv IPv4 marked=36 already_ce=0 ce_rx=8 cnp_tx=4 cnp_rx=4 merged=6 cnp_dropped=0
+PASS E08-read-credit IPv6 marked=52 already_ce=0 ce_rx=10 cnp_tx=4 cnp_rx=4 merged=8 cnp_dropped=0
+PASS E08-send-recv IPv6 marked=36 already_ce=0 ce_rx=8 cnp_tx=4 cnp_rx=4 merged=6 cnp_dropped=0
+PASS E09 IPv4 marked=60 already_ce=0 ce_rx=60 cnp_tx=6 cnp_rx=5 merged=57 cnp_dropped=1
+PASS E09 IPv6 marked=60 already_ce=0 ce_rx=60 cnp_tx=6 cnp_rx=5 merged=57 cnp_dropped=1

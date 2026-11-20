@@ -1,0 +1,144 @@
+PASS results/fixed-write-completion requests=16 success=16 guards=unchanged
+PASS results/fixed-read-completion requests=16 success=16 guards=unchanged
+PASS results/protect-bad-rkey mode=1 status=10 target_digest=0xb43a063055adc383
+PASS results/protect-cross-line mode=12 status=0 target_digest=0xe45368c93b1e652b
+PASS results/protect-cross-page mode=19 status=0 target_digest=0x52089f28aac912b
+PASS results/protect-invalid-mr mode=13 status=10 target_digest=0xb43a063055adc383
+PASS results/protect-isolation-g0 mode=15 status=0 target_digest=0x1720bc0fc349392b
+PASS results/protect-isolation-g0-cross mode=17 status=10 target_digest=0xb43a063055adc383
+PASS results/protect-isolation-g1 mode=16 status=0 target_digest=0xb43a063055adc383
+PASS results/protect-isolation-g1-cross mode=18 status=10 target_digest=0xb43a063055adc383
+PASS results/protect-legal-end mode=11 status=0 target_digest=0xee4ac94af5f2e12b
+PASS results/protect-local-lkey mode=8 status=4 target_digest=0xb43a063055adc383
+PASS results/protect-local-pd mode=9 status=4 target_digest=0xb43a063055adc383
+PASS results/protect-local-read-default mode=14 status=0 target_digest=0x1720bc0fc349392b
+PASS results/protect-local-read-write mode=10 status=4 target_digest=0x9599ca298ea25c83
+PASS results/protect-mr-end mode=6 status=10 target_digest=0xb43a063055adc383
+PASS results/protect-mr-start mode=5 status=10 target_digest=0xb43a063055adc383
+PASS results/protect-mr-wrap mode=7 status=10 target_digest=0xb43a063055adc383
+PASS results/protect-multipacket-read mode=21 status=0 target_digest=0xdcaa036b56f31c83
+PASS results/protect-multipacket-write mode=20 status=0 target_digest=0x5494da080543f92b
+PASS results/protect-remote-pd mode=2 status=10 target_digest=0xb43a063055adc383
+PASS results/protect-remote-read-permission mode=4 status=10 target_digest=0x9599ca298ea25c83
+PASS results/protect-remote-write-permission mode=3 status=10 target_digest=0xb43a063055adc383
+PASS results/timing-normal-valid operation=write completed=545
+PASS results/timing-high-latency-valid operation=write completed=545
+PASS results/fault-drop-read-request mode=25 one completion and correct duplicate/loss handling
+PASS results/fault-drop-read-response mode=26 one completion and correct duplicate/loss handling
+PASS results/fault-drop-write-ack mode=23 one completion and correct duplicate/loss handling
+PASS results/fault-drop-write-request mode=22 one completion and correct duplicate/loss handling
+PASS results/fault-duplicate-read-request mode=27 one completion and correct duplicate/loss handling
+PASS results/fault-duplicate-read-response mode=28 one completion and correct duplicate/loss handling
+PASS results/fault-duplicate-write-request mode=24 one completion and correct duplicate/loss handling
+PASS retry notifications, 64+32 byte subtransaction responses, one completion
+PASS results/write-completion-order/simulation.log: payload write precedes write completion
+PASS results/read-completion-order/simulation.log: payload write precedes read completion
+PASS results/rc-state-psn-wrap-write mode=29 submitted=4 success=4 failure=0
+PASS results/rc-state-psn-wrap-read mode=30 submitted=4 success=4 failure=0
+PASS results/rc-state-outstanding-write mode=31 submitted=8 success=8 failure=0
+PASS results/rc-state-outstanding-read mode=32 submitted=8 success=8 failure=0
+PASS results/rc-state-out-of-order-write mode=33 submitted=4 success=4 failure=0
+PASS results/rc-state-out-of-order-read mode=34 submitted=4 success=4 failure=0
+PASS results/rc-state-consecutive-ack-loss mode=35 submitted=4 success=4 failure=0
+PASS results/rc-state-retry-exhausted mode=36 submitted=2 success=0 failure=2
+PASS results/rc-state-consecutive-request-loss mode=37 submitted=4 success=4 failure=0
+PASS results/rc-state-multipacket-out-of-order mode=38 submitted=1 success=1 failure=0
+PASS results/rc-state-multipacket-read-middle mode=39 submitted=1 success=1 failure=0
+PASS results/qp-send mode=41 one RQ WQE, TX/RX wr_id, payload and Timing completion
+PASS results/qp-send-multipacket mode=42 one RQ WQE, TX/RX wr_id, payload and Timing completion
+PASS results/qp-send-imm mode=43 one RQ WQE, TX/RX wr_id, payload and Timing completion
+PASS results/qp-write-imm mode=44 one RQ WQE, TX/RX wr_id, payload and Timing completion
+PASS results/qp-duplicate-send-multipacket mode=45 one RQ WQE, TX/RX wr_id, payload and Timing completion
+PASS QP transitions, attribute rejection, ERR/RESET and SQD resume
+PASS results/qp-rnr-recovery RNR wait, delayed RECV recovery, one TX/RX completion and one payload
+PASS results/qp-rnr-exhausted two RNR retries, WC status 13, no success ACK and no memory side effect
+PASS SQ/RQ partial submission, selective completion and full resource recycling
+PASS requester/receiver CQ overrun events, disabled CQ and correct wire data
+PASS SQD during retransmission, true drain notification, paused WR resume
+PASS requester/responder Read credit limits, RNR recovery and resource release
+PASS three-source/two-destination SGE SEND with one RQ completion
+PASS two-destination Read scatter and three-source Write gather
+PASS fenced Write waits for Read DMA completion and carries returned data
+PASS two-QP ring wrap, partial post, selective completion, DMA retry and all payloads
+PASS CAS hit/miss, FAA, 64-bit wrap, SwapReq responses and DMA backpressure
+PASS Atomic permission, key, full range and alignment rejection
+PASS two-QP atomicity with final count and unique old-value set
+PASS in-flight duplicate suppression with one execution and one completion
+PASS completed Atomic ACK replay with first old value and one execution
+PASS shared Read/Atomic credits and fenced Write data visibility
+PASS retry exhaustion preserves one remote update and distinct WC errors
+PASS Atomic ERR/RESET flush, preserved update and successful reinitialization
+PASS results/qp-send-batch four outstanding SENDs, unique TX/RX wr_id, four RQ WQEs and ACKs
+PASS results/qp-reset-inflight in-flight WR flush, ERR→RESET→RTS recovery and one post-reset Write/ACK
+PASS MW01 bind, Read/Write/CAS/FAA and remote invalidation
+PASS MW02 bind rejection without partial authorization
+PASS MW03 local invalidate, no-op repeat and rebind
+PASS MW04 zero/multipacket SEND_WITH_INV and receive completion
+PASS MW05 RNR, duplicate and ACK-loss recovery with one receive completion
+PASS MW06 Timing retirement, backpressure and rebind
+PASS MW07 RESET, QPN isolation, MR invalidation and deallocation
+PASS MW08 same-MW index preservation and 8-bit tag wrap
+PASS IPv6 fixed-write protocol, operation and Timing checks
+PASS IPv6 fixed-read protocol, operation and Timing checks
+PASS IPv6 send protocol, operation and Timing checks
+PASS IPv6 send-multipacket protocol, operation and Timing checks
+PASS IPv6 send-imm protocol, operation and Timing checks
+PASS IPv6 write-imm protocol, operation and Timing checks
+PASS IPv6 rnr-recovery protocol, operation and Timing checks
+PASS IPv6 atomic-basic protocol, operation and Timing checks
+PASS IPv6 atomic-replay protocol, operation and Timing checks
+PASS IPv6 multipacket-write protocol, operation and Timing checks
+PASS IPv6 multipacket-read protocol, operation and Timing checks
+PASS IPv6 bad-rkey protocol, operation and Timing checks
+PASS IPv6 duplicate-write-request protocol, operation and Timing checks
+PASS IPv6 drop-read-response protocol, operation and Timing checks
+PASS IPv6 psn-wrap-write protocol, operation and Timing checks
+PASS IPv6 mw-bind protocol, operation and Timing checks
+PASS IPv6 mw-send-inv protocol, operation and Timing checks
+PASS s01 IPv4 forwarding, queues, statistics and RC completion
+PASS s02 IPv4 forwarding, queues, statistics and RC completion
+PASS s03 IPv4 forwarding, queues, statistics and RC completion
+PASS s04 IPv4 forwarding, queues, statistics and RC completion
+PASS s05 IPv4 forwarding, queues, statistics and RC completion
+PASS s06 IPv4 forwarding, queues, statistics and RC completion
+PASS s07 IPv4 forwarding, queues, statistics and RC completion
+PASS s08 IPv4 forwarding, queues, statistics and RC completion
+PASS s01 IPv6 forwarding, queues, statistics and RC completion
+PASS s02 IPv6 forwarding, queues, statistics and RC completion
+PASS s03 IPv6 forwarding, queues, statistics and RC completion
+PASS s04 IPv6 forwarding, queues, statistics and RC completion
+PASS s05 IPv6 forwarding, queues, statistics and RC completion
+PASS s06 IPv6 forwarding, queues, statistics and RC completion
+PASS s07 IPv6 forwarding, queues, statistics and RC completion
+PASS s08 IPv6 forwarding, queues, statistics and RC completion
+PASS results/protect-bad-rkey independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0a:1,0x11:1,0x64:6
+PASS results/protect-cross-line independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0a:1,0x11:1,0x64:6
+PASS results/protect-cross-page independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0a:1,0x11:1,0x64:6
+PASS results/protect-invalid-mr independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0a:1,0x11:1,0x64:6
+PASS results/protect-isolation-g0 independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0a:1,0x11:1,0x64:6
+PASS results/protect-isolation-g0-cross independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0a:1,0x11:1,0x64:6
+PASS results/protect-isolation-g1 independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0a:1,0x11:1,0x64:6
+PASS results/protect-isolation-g1-cross independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0a:1,0x11:1,0x64:6
+PASS results/protect-legal-end independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0a:1,0x11:1,0x64:6
+PASS results/protect-local-lkey independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x64:6
+PASS results/protect-local-pd independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x64:6
+PASS results/protect-local-read-default independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0a:1,0x11:1,0x64:6
+PASS results/protect-local-read-write independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0c:1,0x10:1,0x64:6
+PASS results/protect-mr-end independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0a:1,0x11:1,0x64:6
+PASS results/protect-mr-start independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0a:1,0x11:1,0x64:6
+PASS results/protect-mr-wrap independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0a:1,0x11:1,0x64:6
+PASS results/protect-multipacket-read independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0c:1,0x0d:1,0x0f:1,0x64:6
+PASS results/protect-multipacket-write independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x06:1,0x08:1,0x11:2,0x64:6
+PASS results/protect-remote-pd independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0a:1,0x11:1,0x64:6
+PASS results/protect-remote-read-permission independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0c:1,0x11:1,0x64:6
+PASS results/protect-remote-write-permission independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0a:1,0x11:1,0x64:6
+PASS results/fault-drop-read-request independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0c:1,0x10:1,0x64:6
+PASS results/fault-drop-read-response independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0c:2,0x10:1,0x64:6
+PASS results/fault-drop-write-ack independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0a:2,0x11:1,0x64:6
+PASS results/fault-drop-write-request independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0a:1,0x11:1,0x64:6
+PASS results/fault-duplicate-read-request independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0c:2,0x10:2,0x64:6
+PASS results/fault-duplicate-read-response independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0c:1,0x10:2,0x64:6
+PASS results/fault-duplicate-write-request independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0a:2,0x11:2,0x64:6
+PASS results/fixed-read-completion independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0c:16,0x10:16,0x64:6
+PASS results/fixed-write-completion independent IPv4/UDP4791/BTH/ICRC/payload checks; 0x0a:16,0x11:16,0x64:6
+PASS E10 existing full regression and final queue drain across 18 ECN runs

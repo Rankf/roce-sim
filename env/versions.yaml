@@ -1,0 +1,30 @@
+host:
+  os: Ubuntu 20.04.3 LTS
+  kernel: 5.4.0-216-generic
+  architecture: x86_64
+  cpu_cores: 20
+  memory_gib: 61
+build:
+  compiler: gcc/g++ 9.4.0
+  python: /usr/bin/python3 3.8.10
+  python_config: /usr/bin/python3-config
+  scons: 3.1.2
+  six: 1.16.0
+  isolated_python_packages: env/python38-packages
+models:
+  csrna:
+    url: https://github.com/ncsg-group/csRNA.git
+    commit: 5270d51c584055fb21f05602d624c2bcfb4184c7
+    gem5_base_reported: 20.1.0.2
+    role: primary
+    local_patches:
+      - patches/csrna-rocev2-protection.patch
+      - patches/csrna-build-compat.patch
+algorithm_references:
+  dcqcn:
+    url: https://github.com/alibaba-edu/High-Precision-Congestion-Control.git
+    commit: 9f4be2a9ead8a90e8bf732c66bd758c00e58e5be
+    role: Mellanox CX4+ DCQCN controller and packet pacing reference
+container:
+  available: false
+  reason: current user cannot access the Docker daemon

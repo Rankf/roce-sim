@@ -1,0 +1,9 @@
+model/csrna/
+env/bin/
+env/python38-packages/
+results/*/
+results/*-test
+__pycache__/
+*.pyc
+.env
+.env.*

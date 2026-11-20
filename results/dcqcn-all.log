@@ -1,0 +1,14 @@
+PASS D01 IPv4 fixed rate=10000000000 packet_bytes=138 interval_ps=110400
+PASS D01 IPv4 fixed rate=20000000000 packet_bytes=138 interval_ps=55200
+PASS D01 controller-disabled behavior preserves unpaced transmission
+PASS D02 first CNP changes both controller state and later wire transmission
+PASS D03 periodic monitoring coalesces multiple CNP events into one decrease
+PASS D04 alpha decay and time-driven FR/AI/HAI state machine with rate bounds
+PASS D05 variable-length charging, busy retry without budget consumption; busy=240
+PASS D06 responder-side Read Response pacing and unpaced ACK/CNP progress
+PASS D07 independent QP state, shared-port capacity and deterministic repeat
+PASS D08 feedback marked=180 dropped=0 queues_drained=1
+PASS D08 dcqcn marked=180 dropped=0 queues_drained=1
+PASS D08 sustained three-to-one time series, actual rate and deduplicated goodput exported
+PASS D09 CNP loss, wire-loss retransmission charging, ERR/RESET cleanup and QP rebuild
+PASS D10 IPv6 CNP/rate/pacing representatives and existing dual-stack full regression

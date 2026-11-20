@@ -1,0 +1,5 @@
+PASS D01 charged-byte pacing arithmetic and tick rounding
+PASS D02 first CNP state, timers and monitored rate decrease
+PASS D03 same-tick and cross-period CNP coalescing
+PASS D04 alpha precision, FR/AI/HAI recovery and maximum-rate clamp
+PASS D07 same-tick control priority, round-robin wrap and repeatability

@@ -1,0 +1,8 @@
+PASS BR01 default time-only packet sequence and key FR/AI/HAI rate trajectory match frozen behavior
+PASS BR02 queued/busy/rejected sends are uncharged; actual paced sends match accounting, busy=240
+PASS BR03 threshold equality, overshoot residue and multiple thresholds in one packet
+PASS BR04 independent time/byte triggers observed in algorithm and actual traffic
+PASS BR05 Figure 7 phase boundaries, decrease reset and min/max rate bounds
+PASS BR06 same-tick ordering, duplicate suppression, QP Reset and stale-event isolation
+PASS BR07 PFC pause/resume, busy and retransmission charging with existing pacing
+PASS BR08 old/new comparison, IPv6, existing regressions and final drain

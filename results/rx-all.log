@@ -1,0 +1,10 @@
+PASS RX01 finite accounting, zero-copy Write/Read baseline and final release
+PASS RX02 real finite-buffer overflow, distinct drop accounting and RC recovery
+PASS RX03 DMA-pressure RX Xoff, switch pause, refresh, release-driven Xon and drain
+PASS RX04 RNIC pressure propagates through switch buffer to upstream senders
+PASS RX05 provisioned and insufficient RX headroom with real overflow/recovery
+PASS RX06 Write, Read Response, SEND/RECV, read credit and multipacket lifetime
+PASS RX07 multi-QP shared RX capacity with independent QP completion and clean release
+PASS RX08 ERR/RESET/rebuild with in-flight DMA leases and no stale double release
+PASS RX09 RNR remains distinct from buffer PFC; sustained Xoff refresh verified
+PASS RX10 IPv6 automatic PFC, existing regression, pcap and final drain

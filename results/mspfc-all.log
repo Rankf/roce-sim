@@ -1,0 +1,10 @@
+PASS MS01 static local/cross-switch/reverse RC forwarding and dual-stack completion
+PASS MS02 per-switch conservation, explicit link in-flight accounting and clean RX lease release
+PASS MS03 inter-switch link bottleneck pauses only SW1 ingress A/B and recovers without RX pressure
+PASS MS04 D-only DMA pressure propagates D→SW2→SW1→A/B with local C branch and normal-memory control
+PASS MS05 independent local Xon, sustained refresh termination, lost-Xon expiry and no PFC forwarding
+PASS MS06 only SW2 headroom is reduced; localized drops={'etherswitch1.interface1.outputFifo': 14} with RC recovery
+PASS MS07 shared-link same-priority B→C stall and priority-0 progress during priority-3 pause
+PASS MS08 bidirectional Write, Read Response, SEND and Reset/late-DMA lifecycle across switches
+PASS MS09 CE survives the second hop; CNP attribution, DCQCN recovery and pacing remain correct
+PASS MS10 IPv6 PFC/CE/DCQCN, independent pcap, final drain and frozen 144/10/10 regressions

@@ -1,0 +1,10 @@
+PASS P01 disabled behavior and dual-stack DSCP/ECN classification
+PASS P02 independent PFC pcap format and one-hop consumption without flooding
+PASS P03 per-link direction and common priority gating across QPs
+PASS P04 paused-priority head does not block priority 0; shared port accounting preserved
+PASS P05 enable mask, refresh, zero release, line-rate quantum and natural expiry
+PASS P06 ingress-owned Xoff/Xon, hysteresis, real PFC pcap and buffer drain
+PASS P07 provisioned headroom has no overflow; insufficient case drops=11 with distinct retransmissions
+PASS P08 Write/Read Response cooperation, post-resume pacing and four-mode comparison
+PASS P09 lost Xon natural expiry, QP Reset isolation and port control-state reset
+PASS P10 IPv6 PFC, existing dual-stack regression, pcap and final queue drain

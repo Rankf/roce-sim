@@ -1,0 +1,3 @@
+PASS P01 IPv4/IPv6 DSCP classification and CE priority preservation
+PASS P02 60-byte MAC Control PFC fields and zero padding
+PASS P05 mask, longer/shorter refresh, Xon, quantum and natural expiry
