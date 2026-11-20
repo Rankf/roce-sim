@@ -66,4 +66,17 @@ wc -l results/dcqcn-all.log results/pfc-all.log results/rx-all.log \
 - MS01—MS10 覆盖指定的双交换机拓扑；BR01—BR08 独立验收，不与 MS 混算。
 - 不声称完整覆盖所有 RC/NAK 类型、任意多交换机拓扑、标准 verbs 接入或独立 RNIC 实现互操作。
 
+## 来源与许可说明
+
+本项目基于以下工作构建：
+
+- [ncsg-group/csRNA](https://github.com/ncsg-group/csRNA)，固定提交 `5270d51c584055fb21f05602d624c2bcfb4184c7`。
+- gem5 20.1.0.2。
+- [High-Precision-Congestion-Control](https://github.com/alibaba-edu/High-Precision-Congestion-Control)，参考提交 `9f4be2a9ead8a90e8bf732c66bd758c00e58e5be`。
+- DCQCN 论文 [Congestion Control for Large-Scale RDMA Deployments](https://conferences.sigcomm.org/sigcomm/2015/pdf/papers/p523.pdf)，包括 Figure 7 的时间与字节双触发恢复机制。
+
+本仓库包含独立脚本、检查器、文档和针对上述上游的修改补丁。上游代码及其修改部分仍适用各自的原始版权和许可条款；引用、修改或再分发时应保留相应版权、许可和免责声明。本仓库不将上游许可改写为禁止商用许可。
+
+本项目按“原样”提供，不构成生产环境安全性、商用 RNIC 互操作性或独立实现一致性的保证。详细来源见 `NOTICE.md`。
+
 详细构建参数和阶段说明见 `docs/environment_setup.md` 与 `docs/baseline_acceptance.md`。
